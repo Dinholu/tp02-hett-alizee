@@ -1,0 +1,67 @@
+  <div class="body-container">
+  <form>
+    <h1>Entrez vos données</h1>
+    <div class="form-model">
+      <label for="name">Nom</label>
+      <input type="text" id="name" name="name" placeholder="Votre nom.." [(ngModel)]="name">
+    </div>
+    <div class="form-model">
+      <label for="firstname">Prenom</label>
+      <input type="text" id="firstname" name="firstname" placeholder="Votre prenom.." [(ngModel)]="firstname">
+    </div>
+    <div class="form-model">
+      <label for="address">Adresse</label>
+      <input type="text" id="address" name="address" placeholder="Votre adresse.." [(ngModel)]="address">
+    </div>
+    <div class="form-model">
+      <label for="city">Ville</label>
+      <input type="text" id="city" name="city" placeholder="Votre ville.." [(ngModel)]="city">
+    </div>
+    <div class="form-model">
+      <label for="zip">Code postal</label>
+      <input type="text" id="zip" name="zip" placeholder="Votre code postal.." [(ngModel)]="postalCode">
+    </div>
+    <div class="form-model">
+      <label for="country">Pays</label>
+      <input type="text" id="country" name="country" placeholder="Votre pays.." [(ngModel)]="country">
+    </div>
+    <div class="form-model">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Votre email.." [(ngModel)]="email">
+    </div>
+    <div class="form-model">
+      <label for="civilite">Civilité</label>
+      <select id="civilite" name="civilite" [(ngModel)]="civilite">
+        <option value="monsieur">Monsieur</option>
+        <option value="madame">Madame</option>
+      </select>
+    </div>
+    <div class="form-model">
+      <label for="login">Login</label>
+      <input type="text" id="login" name="login" placeholder="Votre login.." [(ngModel)]="login">
+    </div>
+    <div class="form-model">
+      <label for="password">Mot de passe</label>
+      <input type="password" id="password" name="password" placeholder="Votre mot de passe.." [(ngModel)]="password">
+    </div>
+
+    <button (click)="ShowData()">Valider</button>
+</form>
+
+<div >
+  <h1>{{polite}}</h1>
+  <div *ngIf="show">
+    <p> Nom : {{name}}</p>
+    <p> Prenom : {{firstname}}</p>
+    <p> Adresse : {{address}}</p>
+    <p> Ville : {{city}}</p>
+    <p> Code postal : {{postalCode}}</p>
+    <p> Pays : {{country}}</p>
+    <p> Email : {{email}}</p>
+    <p> Civilité : {{civilite}}</p>
+    <p> Login : {{login}}</p>
+  </div>
+</div>
+
+
+  </div>
